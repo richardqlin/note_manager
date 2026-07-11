@@ -51,4 +51,5 @@ def update(note_id):
         db.notes.update_one({'_id':ObjectId(note_id)}, {'$set':document})
         return redirect('/')
 
-app.run(debug = True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
