@@ -3,7 +3,7 @@ import re
 import pymongo
 from flask import Flask, render_template, request, redirect
 
-from datetime import datetime
+
 
 from bson.objectid import ObjectId
 
@@ -12,6 +12,8 @@ app = Flask(__name__)
 
 client = pymongo.MongoClient('mongodb+srv://richardlin:richardlin@cluster0.3wovn.mongodb.net/myDatabase?retryWrites=true&w=majority')
 db = client.notemanager
+
+
 
 
 @app.route('/',methods=['GET','POST'])
